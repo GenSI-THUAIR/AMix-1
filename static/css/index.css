@@ -2,6 +2,17 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+/* 减少section之间的间距 */
+.section {
+  padding: 1rem 0.1rem !important;
+}
+
+/* 进一步减少section间距的选项 - 如果需要更紧凑，可以使用这个 */
+/*
+.section {
+  padding: 1rem 1.5rem !important;
+}
+*/
 
 .footer .icon-link {
     font-size: 25px;
