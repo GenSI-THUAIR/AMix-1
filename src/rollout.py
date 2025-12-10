@@ -219,8 +219,8 @@ def extract_profile(rounds_idx, data):
                                                 padding="longest",
                                                 return_tensors='pt')
         profile = F.one_hot(profile['input_ids'], num_classes=len(tokenizer)).sum(dim=0)
-        # profile[1:-1, :4] = 0
-        # profile[1:-1, 24:] = 0
+        profile[1:-1, :4] = 0
+        profile[1:-1, 24:] = 0
         # print(profile)
         
         profile = (profile/profile.sum(dim=-1)[...,None])
